@@ -1,0 +1,19 @@
+{
+  "name": "auxiiatron-api",
+  "version": "1.0.0",
+  "description": "proyecto ing soft",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bussy888/Proy_Ing_soft.git"
+  },
+  "author": "UPB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bussy888/Proy_Ing_soft/issues"
+  },
+  "homepage": "https://github.com/Bussy888/Proy_Ing_soft#readme"
+}
