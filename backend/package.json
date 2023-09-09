@@ -4,7 +4,8 @@
   "description": "proyecto ing soft",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Bussy888/Proy_Ing_soft/issues"
   },
-  "homepage": "https://github.com/Bussy888/Proy_Ing_soft#readme"
+  "homepage": "https://github.com/Bussy888/Proy_Ing_soft#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "pg": "^8.11.2"
+  }
 }
