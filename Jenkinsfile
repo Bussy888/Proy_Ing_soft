@@ -42,10 +42,10 @@ stage('Desplegar en Vercel') {
             sh 'npm install -g vercel'
 
             // Iniciar sesión en Vercel con tus credenciales
-            sh 'vercel login' // Esto te pedirá iniciar sesión y autenticarte con tu cuenta de Vercel
+            sh 'vercel login' 
 
             // Desplegar la aplicación en Vercel
-            sh 'vercel deploy --prod' // Puedes personalizar esta línea según tus necesidades
+            sh 'vercel deploy --prod' 
         }
     }
 }
