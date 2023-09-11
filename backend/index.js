@@ -1,17 +1,26 @@
-const express = require('express');
-const routes = require('./src/routes/api');
-const cors = require('cors');
-//creadno el servidor
+const express = require("express");
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./src/config/swagger');
+
+const routes = require("./src/routes/api");
+
+
+// Creando el servidor
 const app = express();
-app.use(cors());
-//Leer contenido json detntro del body
+
+// Leer contenido json dentro del body
 app.use(express.json());
 
-//creando API
+
+//Creando la API
 app.use("/api", routes);
 
-const PORT = 3000; //TODO crear enviroments
+// Swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+
+const PORT = 3000; // TODO: crear enviroments
 
 app.listen(PORT, () => {
-    console.log("El servidor se ha levantadao correctamente en el puerto ", PORT);
-})
+  console.log("El servidor se ha levantado correctamente en el puerto ", PORT);
+});

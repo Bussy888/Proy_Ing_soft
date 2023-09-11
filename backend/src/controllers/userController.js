@@ -1,10 +1,13 @@
 const getUserService = require('../services/userService');
+const logger = require('../utils/logger');
+
 const getUserController = async (req, res) => {
-    const users = await getUserService();
+    logger.info('getUserController - Req', req);
     try {
+        const users = await getUserService();
         return res.status(200).json({
             success: true,
-            message: 'Students retrieved successfully',
+            message: 'Users retrieved successfully',
             data: users
         });
     } catch (error) {

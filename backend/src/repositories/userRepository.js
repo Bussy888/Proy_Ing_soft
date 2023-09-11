@@ -5,11 +5,13 @@ const db = knex(pgConnection.development);
 
 const getUser = async () => {
   try {
-    const users = await db("estudiantes").select("*");
+    const users = await db("users").select("*");
     const usersJson = users.map((row) => ({
       id: row.id,
-      nombre: row.nombre,
-      semestre: row.semestre
+      name: row.name,
+      lastname: row.lastname,
+      code: row.code,
+      username: row.username,
     }));
     return usersJson;
   } catch (e) {
@@ -18,4 +20,4 @@ const getUser = async () => {
   }
 };
 
-module.exports = getUser ;
+module.exports.getUser = getUser ;
