@@ -1,12 +1,21 @@
 import "./App.css";
+import Grid from '@mui/material/Unstable_Grid2';
+import Calculator from "./components/Calculator";
 import SumCalculator from "./components/SumCalculator";
 
-const name = "Mateo Michel";
+//const name = "Mateo Michel";
 function App() {
 
   return (
     <>
+    <Grid container spacing={2}>
+        <Grid xs={12}>
+      <Calculator></Calculator>
+      <Grid xs={2}>
       <SumCalculator></SumCalculator>
+      </Grid>
+      </Grid>
+      </Grid>
     </>
   );
 }
